@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">{{message}}</div>
+    <div id="app-2">
+      <span v-bind:title="message">
+        마우스를 여기 올리면 동적으로 바인딩된 title 을 볼수있음?!
+      </span>
+    </div>
+    <div id="app-3">
+      <button v-on:click="seen = !seen">toggle</button>
+      <transition name="fade">
+        <span v-if="seen">Now you see me {{seen}}</span>
+      </transition>
+    </div>
+    <div id="app-4">
+      <ol>
+        <li v-for="todo in todos">{{todo.text}}</li>
+      </ol>
+    </div>
+    <div id="app-5">
+      <p>{{message}}</p>
+      <button v-on:click="reversMessage">메세지 뒤집기</button>
+    </div>
+    <div id="app-6">
+      <p>{{message}}</p>
+      <input v-module="message" />
+    </div>
+    <div id="app-7">
+      <ol>
+        <todo-item
+          v-for="item in groceryList"
+          v-bind:todo="item"
+          v-bind:key="item.id"
+        ></todo-item>
+      </ol>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
