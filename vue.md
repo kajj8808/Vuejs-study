@@ -8,7 +8,7 @@
 - https://kr.vuejs.org/v2/guide/transitions.html [트랜지션 클래스]
 
 ## prop
--https://kr.vuejs.org/v2/guide/components.html#sidebar-sponsors-special
-
-## https://kr.vuejs.org/v2/guide/instance.html
+- https://kr.vuejs.org/v2/guide/components.html#sidebar-sponsors-special
+- ['propsDataOption'] https://kr.vuejs.org/v2/api/#propsData
+## 
 

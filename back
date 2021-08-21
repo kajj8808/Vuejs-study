@@ -1,0 +1,26 @@
+<div id="app">
+      <h3>App - freeze</h3>
+      {{foo}}
+      <!-- freeze 해서 안바뀜! -->
+      <button v-on:click="foo = baz">Change</button>
+    </div>
+    <div id="app2">
+      <h3>App2 - 기본문법 / 약어</h3>
+      {{number + 1}} {{ ok ? 'YES' : 'No'}}
+      {{text.split('').reverse().join('')}}
+      <div v-bind:id="'list-' + id">bind id-div</div>
+      <!-- v-if 는 엘리먼트 제거 또는 삽입. -->
+      <p v-if="ok">이제 나를 볼수있어요</p>
+      <a v-bind:href="url">Vue document</a>
+      <!-- preventDefault -->
+      <form v-on:submit.prevent="onSubmit">preventDefault</form>
+      <h4>v-bind 약어</h4>
+      <a v-bind:href="url">Vue document</a>
+      <a :href="url">Vue document</a>
+      <a :[key]="url">Vue document</a>
+      <h4>v-on 약어</h4>
+      <a v-on:click="doSomething">on</a>
+      <a @click = "doSomething">on</a>
+      <a @[evnet] = "doSomething">on</a>
+    </div>
+    
